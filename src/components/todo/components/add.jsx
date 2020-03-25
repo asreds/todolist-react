@@ -15,7 +15,13 @@ export default class Add extends Component {
       status: props.data.status ? props.data.status : 0,
       createdAt: props.data.createdAt
         ? props.data.createdAt
-        : `${d.getFullYear()}-${d.getMonth()}-${d.getDay()} ${d.getHours()}:${d.getMinutes()}`,
+        : `${d.getFullYear()}-${
+          d.getMonth() + 1 < 10 ? '0' : ''
+        }${d.getMonth() + 1}-${d.getDay()} ${
+          d.getHours() < 10 ? '0' : ''
+        }${d.getHours()}:${
+          d.getMinutes() < 10 ? '0' : ''
+        }${d.getMinutes()}`,
       error: false
     };
   }
