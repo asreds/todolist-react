@@ -31,7 +31,7 @@ export function addList (params) {
 }
 
 /**
- *  add list
+ *  update list
  * @returns array
  */
 
@@ -44,7 +44,7 @@ export function updateList (params) {
 }
 
 /**
- *  add list
+ *  delete list
  * @returns array
  */
 
