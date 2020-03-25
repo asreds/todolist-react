@@ -104,6 +104,17 @@ pre .line::before {
   margin-top: 40px;
   .table-todo {
     width: 100%;
+    .table-loading {
+      text-align: center;
+    }
+    .list-todo{
+      li {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #4a4a4a;
+        cursor: pointer;
+      }
+    }
   }
 }
 
