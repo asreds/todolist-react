@@ -11,7 +11,9 @@ class Todo extends Component {
     this.props.dispatch(fetchData());
   }
   add () {
-    window.showModalContent(props => <Add {...props} dispatch={this.props.dispatch}/>);
+    if (this.props.todo.data) {
+      window.showModalContent(props => <Add {...props} dispatch={this.props.dispatch}/>);
+    }
   }
   generateList () {
     return <React.Fragment>
@@ -24,7 +26,7 @@ class Todo extends Component {
       <div className="bd-main">
         <h1>Simple todo list using react and redux by Asih Priyatno</h1>
         <div className="todo-container">
-          <button className="button is-primary" onClick={() => this.add()}>
+          <button className="button is-primary is-disabled" onClick={() => this.add()} disabled={!this.props.todo.data}>
             Add
           </button>
           <table className="table table-todo">
