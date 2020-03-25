@@ -32,7 +32,7 @@ class Todo extends Component {
           <table className="table table-todo">
             <thead>
               <tr>
-                <th style={{ width: '50%' }}> In rogress</th>
+                <th style={{ width: '50%' }}> In Progress</th>
                 <th>Finish</th>
               </tr>
             </thead>
